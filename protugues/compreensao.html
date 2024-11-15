@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Interativa: Compreensão e Interpretação de Textos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .highlight {
+            background-color: #d1e7dd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+            <h1>Compreensão e Interpretação de Textos</h1>
+            <p class="lead">Vamos explorar a arte de entender e interpretar textos juntos!</p>
+        </header>
+
+        <section>
+            <h2>O que é Compreensão e Interpretação?</h2>
+            <p>A compreensão de texto é a habilidade de entender a mensagem que ele transmite. Já a interpretação busca entender o significado e a intenção do autor.</p>
+            <div class="highlight">
+                <p><strong>Dica:</strong> Pergunte-se sempre: "O que o autor realmente quis dizer?"</p>
+            </div>
+        </section>
+
+        <section class="mt-4">
+            <h2>Estratégias para Melhorar a Compreensão</h2>
+            <ul>
+                <li><strong>Leitura Atenta:</strong> Leia o texto mais de uma vez.</li>
+                <li><strong>Fazer Anotações:</strong> Escreva suas impressões e o que entende.</li>
+                <li><strong>Discussão:</strong> Fale sobre o que leu com amigos.</li>
+            </ul>
+        </section>
+
+        <section class="mt-4">
+            <h2>Exercício Prático</h2>
+            <p>Leia o trecho abaixo e responda às perguntas.</p>
+            <blockquote class="blockquote">
+                <p>“A leitura é para a mente o que o exercício é para o corpo.”</p>
+                <footer class="blockquote-footer">Joseph Addison</footer>
+            </blockquote>
+            <div class="question">
+                <h4>Perguntas:</h4>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question1" id="q1a" value="a">
+                    <label class="form-check-label" for="q1a">A leitura é importante?</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question1" id="q1b" value="b">
+                    <label class="form-check-label" for="q1b">O autor fala sobre exercícios físicos.</label>
+                </div>
+                <button class="btn btn-custom mt-2" onclick="checkAnswer('question1', 'a')">Verificar Resposta</button>
+                <p class="mt-2" id="result1"></p>
+            </div>
+        </section>
+
+        <section class="mt-4">
+            <h2>Deixe seu Comentário</h2>
+            <form id="commentForm">
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Seu Comentário:</label>
+                    <textarea class="form-control" id="comment" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-custom">Enviar Comentário</button>
+            </form>
+            <div id="commentsSection" class="mt-4"></div>
+        </section>
+
+        <footer class="text-center mt-5">
+            <p>© 2024 - Compreensão e Interpretação de Textos</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function checkAnswer(questionName, correctValue) {
+            const radios = document.getElementsByName(questionName);
+            let selectedValue = '';
+            for (const radio of radios) {
+                if (radio.checked) {
+                    selectedValue = radio.value;
+                    break;
+                }
+            }
+            const resultElement = document.getElementById(`result1`);
+            if (selectedValue === correctValue) {
+                resultElement.textContent = "Correto! A leitura é muito importante.";
+                resultElement.style.color = "green";
+            } else {
+                resultElement.textContent = "Errado! Tente novamente.";
+                resultElement.style.color = "red";
+            }
+        }
+
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const comment = document.getElementById('comment').value;
+            const commentsSection = document.getElementById('commentsSection');
+            const commentDiv = document.createElement('div');
+            commentDiv.classList.add('alert', 'alert-secondary', 'mt-2');
+            commentDiv.textContent = comment;
+            commentsSection.appendChild(commentDiv);
+            document.getElementById('comment').value = ''; // Limpar o campo de comentário
+        });
+    </script>
+</body>
+</html>

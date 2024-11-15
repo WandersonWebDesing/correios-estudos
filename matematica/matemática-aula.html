@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula Interativa de Matemática</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar {
+      background-color: #007bff;
+    }
+    .modal-header, .modal-footer {
+      background-color: #f1f1f1;
+    }
+    h2 {
+      color: #007bff;
+    }
+    .btn-primary {
+      background-color: #28a745;
+      border: none;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f1f1f1;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu fixo no topo -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Aula Interativa de Matemática</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#numeros-inteiros">Números Inteiros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#numeros-racionais">Números Racionais</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proporcoes">Proporções</a></li>
+          <li class="nav-item"><a class="nav-link" href="#porcentagem">Porcentagem</a></li>
+          <li class="nav-item"><a class="nav-link" href="#juros">Juros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#funcoes">Funções</a></li>
+          <li class="nav-item"><a class="nav-link" href="#medidas">Medidas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#monetario">Monetário</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main class="container mt-5 pt-5">
+    <h1 class="text-center">Aula Interativa de Matemática</h1>
+
+    <section id="numeros-inteiros" class="my-5">
+      <h2>Números Inteiros</h2>
+      <p>Compreenda as operações e propriedades dos números inteiros, incluindo adição, subtração, multiplicação e divisão. Aprofunde-se em conceitos como múltiplos e divisores, que são essenciais para resolver problemas desafiadores.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNumerosInteiros">Saiba Mais</button>
+    </section>
+
+    <section id="numeros-racionais" class="my-5">
+      <h2>Números Racionais</h2>
+      <p>Domine operações e propriedades dos números racionais. Aprenda a resolver problemas envolvendo as quatro operações na forma fracionária e decimal, aplicando seus conhecimentos de maneira prática.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNumerosRacionais">Saiba Mais</button>
+    </section>
+
+    <section id="proporcoes" class="my-5">
+      <h2>Proporções</h2>
+      <p>Entenda as relações entre números e grandezas proporcionais. Aprenda a resolver divisões proporcionais e a aplicar a regra de três simples e composta no cotidiano, utilizando razões e proporções.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProporcoes">Saiba Mais</button>
+    </section>
+
+    <section id="porcentagem" class="my-5">
+      <h2>Porcentagem</h2>
+      <p>Aprenda a calcular porcentagens com facilidade, utilizando exemplos práticos que mostram aplicações do dia a dia. Desenvolva habilidades para resolver questões que envolvem porcentagens em diferentes contextos.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPorcentagem">Saiba Mais</button>
+    </section>
+
+    <section id="juros" class="my-5">
+      <h2>Juros e Desconto Simples</h2>
+      <p>Compreenda os conceitos de juros, capital, tempo, taxa e montante. Aprenda a calcular juros e descontos simples, essenciais para situações financeiras do dia a dia.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJuros">Saiba Mais</button>
+    </section>
+
+    <section id="funcoes" class="my-5">
+      <h2>Funções do 1º e 2º Graus</h2>
+      <p>Explore as funções do 1º e 2º graus, compreendendo suas características e como aplicá-las em problemas matemáticos variados. Aprofunde-se na interpretação de gráficos e equações.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFuncoes">Saiba Mais</button>
+    </section>
+
+    <section id="medidas" class="my-5">
+      <h2>Sistema de Medidas</h2>
+      <p>Aprenda a trabalhar com medidas decimais e não decimais de forma precisa e eficaz, incluindo conversões entre diferentes unidades de medida e aplicações práticas no cotidiano.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMedidas">Saiba Mais</button>
+    </section>
+
+    <section id="monetario" class="my-5">
+      <h2>Sistema Monetário Brasileiro</h2>
+      <p>Entenda como o sistema monetário brasileiro funciona e como resolver problemas financeiros utilizando esse conhecimento. Explore a relação entre diferentes cédulas e moedas e seu uso prático.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMonetario">Saiba Mais</button>
+    </section>
+  </main>
+
+  <!-- Modal Números Inteiros -->
+  <div class="modal fade" id="modalNumerosInteiros" tabindex="-1" aria-labelledby="modalNumerosInteirosLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalNumerosInteirosLabel">Números Inteiros</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Os números inteiros são aqueles que não possuem partes decimais, como -3, 0, 7. São usados em diversas operações matemáticas como adição, subtração, multiplicação e divisão. Dominar os múltiplos e divisores ajuda a resolver problemas práticos com eficiência.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Números Racionais -->
+  <div class="modal fade" id="modalNumerosRacionais" tabindex="-1" aria-labelledby="modalNumerosRacionaisLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalNumerosRacionaisLabel">Números Racionais</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Números racionais podem ser representados como frações (3/4) ou decimais (0,75). Suas operações incluem adição, subtração, multiplicação e divisão, fundamentais para cálculos do dia a dia.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Proporções -->
+  <div class="modal fade" id="modalProporcoes" tabindex="-1" aria-labelledby="modalProporcoesLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProporcoesLabel">Proporções</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Proporções são relações entre grandezas. A regra de três simples e composta é essencial para resolver problemas práticos, como determinar o valor de um item com base em comparações.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Porcentagem -->
+  <div class="modal fade" id="modalPorcentagem" tabindex="-1" aria-labelledby="modalPorcentagemLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalPorcentagemLabel">Porcentagem</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>A porcentagem é uma forma de expressar uma parte de um todo em relação a 100. Aprender a calcular porcentagens ajuda a entender descontos, acréscimos e outros contextos financeiros.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Juros -->
+  <div class="modal fade" id="modalJuros" tabindex="-1" aria-labelledby="modalJurosLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalJurosLabel">Juros e Desconto Simples</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Os juros podem ser simples ou compostos, dependendo da aplicação. É importante saber calcular os juros sobre um capital, assim como entender o conceito de desconto, que é essencial em compras e vendas.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Funções -->
+  <div class="modal fade" id="modalFuncoes" tabindex="-1" aria-labelledby="modalFuncoesLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFuncoesLabel">Funções do 1º e 2º Graus</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Funções são representações matemáticas de relações. As funções do 1º e 2º graus têm aplicações práticas em diversas áreas, como a física e a economia.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Medidas -->
+  <div class="modal fade" id="modalMedidas" tabindex="-1" aria-labelledby="modalMedidasLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalMedidasLabel">Sistema de Medidas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>O sistema de medidas é fundamental para a compreensão de grandezas. Aprender a converter entre diferentes unidades é essencial para resolver problemas práticos em diversas áreas do conhecimento.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Sistema Monetário -->
+  <div class="modal fade" id="modalMonetario" tabindex="-1" aria-labelledby="modalMonetarioLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalMonetarioLabel">Sistema Monetário Brasileiro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>O sistema monetário brasileiro é composto por cédulas e moedas que representam valores. Compreender como utilizá-los é crucial para a vida financeira, além de permitir a solução de problemas financeiros cotidianos.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 Aula Interativa de Matemática. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

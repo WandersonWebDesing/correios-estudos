@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Avaliação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        h3 {
+            margin-top: 15px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .button {
+            margin-top: 20px;
+            text-align: center;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .info-text {
+            margin-top: 20px;
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+        .error {
+            background-color: #ffcccc; /* Fundo vermelho para perguntas não respondidas */
+        }
+        .correct {
+            background-color: #ccffcc; /* Fundo verde para respostas corretas */
+        }
+        .incorrect {
+            background-color: #ffcccb; /* Fundo vermelho claro para respostas incorretas */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Formulário de Avaliação</h1>
+
+<h2>Texto para os itens de 1 a 11</h2>
+<div class="info-text">
+    <p>O Pe. Antônio Vieira foi submetido a residência forçada, em Coimbra, de fevereiro de 1663 até setembro de 1665 e, finalmente, preso pela Inquisição no dia 1.º de outubro.</p>
+    <p>Publicou-se uma importante série de cartas escritas por ele nesse período, que se escalonaram com bastante regularidade de 17 de dezembro de 1663 a 28 de setembro de 1665.</p>
+    <p>Em cerca de trinta cartas que foram conservadas, encontram-se alusões mais ou menos desenvolvidas ao “tempo que faz”. Para apreciar o valor e o significado dessas indicações, é preciso entender as principais razões que levavam o padre a interessar-se pelo tempo. A principal era, sem dúvida, as repercussões que certos tipos de tempo tinham sobre a regularidade do funcionamento das comunicações, em especial a circulação das cartas e notícias.</p>
+    <p>Sujeitado a residência forçada, Antônio Vieira ansiava pela chegada do correio, sobretudo o que provinha de Lisboa e da Corte, mas também dos outros lugares onde tinha amigos. Em certos períodos do ano, inquietava-se também pelas condições de navegação do Atlântico, perigosas para as frotas do Brasil e da Índia.</p>
+    <p>Outra razão do seu interesse eram as repercussões do tempo sobre a própria saúde e a dos amigos, e sobre os rebates da peste. Enfim, não podia esquecer as campanhas militares que, a partir da primavera, decorriam então no Alentejo.</p>
+    <p>Convém não esquecer que as anotações climáticas nas cartas de Antônio Vieira podiam ter, às vezes, valor puramente metafórico. No ambiente de acesas intrigas palacianas que o Padre acompanhava a distância, ele deixa mais de uma vez transparecer o receio de que as cartas dele e dos seus correspondentes fossem abertas e lidas. Por isso, expressa-se muitas vezes por alusões e metáforas.</p>
+    <p>Por exemplo, a 20 de julho, escrevia a D. Teodósio: “Em tempo de tanta tempestade, não é seguro navegar sem roteiro.” Tratava-se apenas, na realidade, de combinar o percurso para um encontro clandestino estival nas margens do Mondego. O contexto permite, quase sempre, desfazer as dúvidas.</p>
+    <p>Suzanne Daveau. Os tipos de tempo em Coimbra (dez. 1663 – set. 1665), nas cartas de Padre Antônio Vieira. In: Revista Finisterra, v. 32, n.º 64, Lisboa, 1997, p. 109-15. Internet: <www.ceg.ul.pt> (com adaptações).</p>
+</div>
+
+<form id="quizForm">
+    <h3>Sobre o Texto</h3>
+    <label>1. Nesse texto, essencialmente informativo, o assunto está centrado nas menções feitas ao clima pelo Padre Antônio Vieira em cartas escritas no exílio.
+        <input type="radio" name="item1" value="Verdadeiro"> Verdadeiro
+        <input type="radio" name="item1" value="Falso"> Falso
+    </label>
+    
+    <label>2. De acordo com o texto, as cartas do Padre Antônio Vieira merecem destaque porque foram escritas durante o período em que esteve exilado.
+        <input type="radio" name="item2" value="Verdadeiro"> Verdadeiro
+        <input type="radio" name="item2" value="Falso"> Falso
+    </label>
+    
+    <label>3. Conforme o texto, entre as razões que motivavam o interesse do Padre Antônio Vieira pelo tempo, algumas eram de cunho pessoal.
+        <input type="radio" name="item3" value="Verdadeiro"> Verdadeiro
+        <input type="radio" name="item3" value="Falso"> Falso
+    </label>
+    
+    <label>4. Constata-se no texto que o emprego da linguagem conotativa nas anotações climáticas nas cartas de Antônio Vieira visava obstar a compreensão da leitura dessas cartas por quem não fosse o seu destinatário.
+        <input type="radio" name="item4" value="Verdadeiro"> Verdadeiro
+        <input type="radio" name="item4" value="Falso"> Falso
+    </label>
+    
+    <label>5. Em todas as trinta cartas escritas durante os dois anos de degredo, o Padre Antônio Vieira mencionava o clima em Portugal.
+        <input type="radio" name="item5" value="Falso"> Verdadeiro
+        <input type="radio" name="item5" value="Falso"> Falso
+    </label>
+
+    <h3>Sobre Vocabulário e Estrutura Linguística</h3>
+    <label>6. O emprego de vírgula logo após o vocábulo “indicações” (R.10) é obrigatório.
+        <input type="radio" name="item6" value="Falso"> Verdadeiro
+        <input type="radio" name="item6" value="Falso"> Falso
+    </label>
+    
+    <label>7. O emprego do sinal indicativo de crase em “Sujeitado a residência forçada” (R.14-15) manteria a correção gramatical do texto.
+        <input type="radio" name="item7" value="Falso"> Verdadeiro
+        <input type="radio" name="item7" value="Falso"> Falso
+    </label>
+    
+    <label>8. O vocábulo “onde” (R.17) poderia ser corretamente substituído por aonde.
+        <input type="radio" name="item8" value="Falso"> Verdadeiro
+        <input type="radio" name="item8" value="Falso"> Falso
+    </label>
+    
+    <label>9. A flexão de plural na forma verbal “podiam” (R.25) justifica-se pela concordância com “anotações” (R.24).
+        <input type="radio" name="item9" value="Verdadeiro"> Verdadeiro
+        <input type="radio" name="item9" value="Falso"> Falso
+    </label>
+    
+    <label>10. Seria mantida a correção gramatical do texto, se a preposição “de”, em sua primeira ocorrência, no trecho “de 17 de dezembro de 1663 a 28 de setembro de 1665” (R.6), fosse substituída por entre.
+        <input type="radio" name="item10" value="Falso"> Verdadeiro
+        <input type="radio" name="item10" value="Falso"> Falso
+    </label>
+    
+    <label>11. Estariam preservados o sentido e a correção gramatical do texto caso se substituísse “encontram-se” (R.8) por “são encontradas”.
+        <input type="radio" name="item11" value="Falso"> Verdadeiro
+        <input type="radio" name="item11" value="Falso"> Falso
+    </label>
+
+    <div class="button">
+        <input type="submit" value="Enviar">
+    </div>
+</form>
+
+<div id="result" class="info-text" style="display:none;"></div>
+
+ <!--footer-->
+
+ <footer>
+    &copy; 2024 WandersonWeb. Todos os direitos reservados.
+</footer>
+
+<script>
+    document.getElementById('quizForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        const answers = {
+            item1: "Verdadeiro",
+            item2: "Verdadeiro",
+            item3: "Verdadeiro",
+            item4: "Verdadeiro",
+            item5: "Falso",
+            item6: "Falso",
+            item7: "Falso",
+            item8: "Falso",
+            item9: "Verdadeiro",
+            item10: "Falso",
+            item11: "Falso"
+        };
+
+        let score = 0;
+        let resultText = "Resultados:<br>";
+        let allAnswered = true;
+
+        for (let item in answers) {
+            const userAnswer = document.querySelector(`input[name="${item}"]:checked`);
+            const questionLabel = document.querySelector(`label:has(input[name="${item}"])`);
+            
+            if (!userAnswer) {
+                questionLabel.classList.add('error'); // Marca a pergunta não respondida
+                allAnswered = false; // Indica que há perguntas não respondidas
+            } else {
+                const userAnswerValue = userAnswer.value;
+                if (userAnswerValue === answers[item]) {
+                    score++;
+                    questionLabel.classList.add('correct'); // Marca a resposta correta
+                } else {
+                    questionLabel.classList.add('incorrect'); // Marca a resposta incorreta
+                }
+                resultText += `${item}: ${userAnswerValue} - ${userAnswerValue === answers[item] ? "Correta" : "Incorreta"}<br>`;
+            }
+        }
+
+        if (!allAnswered) {
+            alert("Por favor, responda todas as perguntas antes de enviar.");
+            return; // Sai da função se houver perguntas não respondidas
+        }
+
+        document.getElementById('result').innerHTML = resultText;
+        document.getElementById('result').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>
